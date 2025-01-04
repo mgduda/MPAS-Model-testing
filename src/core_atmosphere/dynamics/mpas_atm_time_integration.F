@@ -140,6 +140,8 @@ module atm_time_integration
        logical, pointer :: config_positive_definite
 
 
+       ierr = 0
+
        call mpas_log_write('')
        call mpas_log_write('Checking consistency of dynamics settings...')
 
@@ -163,8 +165,6 @@ module atm_time_integration
 
        call mpas_log_write(' ----- done checking dynamics settings -----')
        call mpas_log_write('')
-
-       ierr = 0
 
    end subroutine mpas_atm_dynamics_checks
 
